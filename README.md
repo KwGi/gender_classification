@@ -1,4 +1,4 @@
-# gender_classification_challenge
+# gender_classification_challenge-> Finished 
 
 ##Overview
 
@@ -20,9 +20,9 @@ Once you have your dependencies installed via pip, run the script in terminal vi
 python demo.py
 ```
 
-##Challenge
+##Challenge -> finished 
 
-Find 3 more classifiers from the sci-kit learn [documentation](http://scikit-learn.org/stable/auto_examples/classification/plot_classifier_comparison.html) and add them to the demo.py code. Train them on the same dataset and [compare their results](http://scikit-learn.org/stable/modules/generated/sklearn.metrics.accuracy_score.html). You can determine accuracy by trying to predict testing you trained classifier on samples from the training data and see if it correctly classifies it. Push your code repository to [github](https://help.github.com/articles/set-up-git/) then post it in the comments. I'll give the winner a shoutout a week from now!
+Added : AdaBoostClassifier , GaussianNB and QuadraticDiscriminantAnalysis from the sci-kit learn [documentation](http://scikit-learn.org/stable/auto_examples/classification/plot_classifier_comparison.html) .I determine accuracy using accuracy score from (http://scikit-learn.org/stable/modules/generated/sklearn.metrics.accuracy_score.html) . 
 
 ##Credits
 
