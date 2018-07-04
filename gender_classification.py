@@ -3,6 +3,7 @@ from sklearn import ensemble
 from sklearn import naive_bayes
 from sklearn import discriminant_analysis
 from  sklearn.metrics import accuracy_score
+import numpy as np
 
 clf= [tree.DecisionTreeClassifier(),ensemble.AdaBoostClassifier(), naive_bayes.GaussianNB(),
     discriminant_analysis.QuadraticDiscriminantAnalysis()] ;
@@ -38,7 +39,7 @@ score =  []
 for i in range(len(prediction)):
         score.append(accuracy_score([0] if y_true == "male" else [1] , [0] if prediction[i] == "male" else [1]))
 
-print("\n Predictions: ")
+print("\n Predictions: (left number -> probality of being female , right number -> probality of being male )")
 #print predicts
 for  i in range(len(prediction)):
     if i == 0 :
@@ -49,7 +50,7 @@ for  i in range(len(prediction)):
         print("GaussianNB predicts: ",end = "")
     else :
         print("QuadraticDiscriminantAnalysis predicts: ",end = "")
-    print(prediction[i])
+    print(prediction[i] , "with probality " ,np.round((clf[i].predict_proba([inputdata])* 100),2))
     print("")
 
 print("\n Scores: (1 -> right prediction, 0 -> wrong prediction)")
